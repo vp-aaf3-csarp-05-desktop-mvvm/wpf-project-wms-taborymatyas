@@ -11,8 +11,10 @@
     </Window.DataContext>
     <StackPanel Orientation="Vertical">
         <Label>Név:</Label>
-        <TextBlock>Kiss Anna</TextBlock>
         <TextBlock Text="{Binding Name}"/>
+        <Label>Adószám:</Label>
+        <TextBlock Text="{Binding adoszam}"></TextBlock>
+        <Label>Szabadnapok száma:</Label>
+        <TextBlock Text="{Binding szabadnapokSzama}"></TextBlock>
     </StackPanel>
-
 </Window>
