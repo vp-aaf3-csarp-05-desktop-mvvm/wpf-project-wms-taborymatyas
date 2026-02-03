@@ -3,6 +3,6 @@ namespace WMSProject
 {
     public class EmployeeViewModel
     {
-        public string Name = "Nagy Anna";
+        public string Name { get; } = "Nagy Anna";
     }
 }
