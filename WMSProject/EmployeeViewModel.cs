@@ -17,6 +17,6 @@ namespace WMSProject
         /// <summary>
         /// Kivett szabadnapok száma
         /// </summary>
-        public int DaysOff { get; } = 6;
+        public int DaysOff { get; set; } = 6;
     }
 }
