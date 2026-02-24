@@ -1,10 +1,12 @@
 ﻿
+using CommunityToolkit.Mvvm.ComponentModel;
+
 namespace WMSProject
 {
     /// <summary>
     /// Dolgozó adatok megjelenítésére szolgáló osztály (szabadnapkezelés)
     /// </summary>
-    public class EmployeeViewModel
+    public partial class EmployeeViewModel : ObservableObject
     {
         /// <summary>
         /// Dolgozó neve
@@ -17,6 +19,18 @@ namespace WMSProject
         /// <summary>
         /// Kivett szabadnapok száma
         /// </summary>
-        public int DaysOff { get; set; } = 6;
+        [ObservableProperty]
+        private int szabadnapokSzama;
+        private int DaysOff { get; set; } = 6;
+        private int VacationDays { get;} = 45;
+
+        public int RemainingDaysOff
+        {
+            get
+            {
+                int eredmeny = VacationDays - DaysOff;
+                return eredmeny;
+            }
+        }
     }
 }
