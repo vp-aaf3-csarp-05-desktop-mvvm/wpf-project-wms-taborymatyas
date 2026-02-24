@@ -20,11 +20,12 @@ namespace WMSProject
         /// Kivett szabadnapok száma
         /// </summary>
         [ObservableProperty]
-        private int szabadnapokSzama;
+        [NotifyPropertyChangedFor(nameof(RemainingDays))]
+        private int szabadnapokSzama = 8;
         private int DaysOff { get; set; } = 6;
         private int VacationDays { get;} = 45;
 
-        public int RemainingDaysOff
+        public int RemainingDays
         {
             get
             {
